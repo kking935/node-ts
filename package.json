@@ -1,0 +1,32 @@
+{
+  "name": "vector-recruits-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.7",
+    "@types/node": "^14.0.27",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  },
+  "scripts": {
+    "start": "node dist/app.js",
+    "dev": "nodemon src/app.ts",
+    "build": "tsx -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kking935/vector-recruits-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kking935/vector-recruits-backend/issues"
+  },
+  "homepage": "https://github.com/kking935/vector-recruits-backend#readme"
+}
