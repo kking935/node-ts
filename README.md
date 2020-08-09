@@ -1,4 +1,5 @@
 # Node Typescript
+A base app for developing node servers with typescript
 ## Development
 To start for development, run 
 ```
