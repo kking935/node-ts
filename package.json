@@ -16,7 +16,7 @@
   "scripts": {
     "start": "node dist/app.js",
     "dev": "nodemon src/app.ts",
-    "build": "tsx -p ."
+    "build": "tsc -p ."
   },
   "repository": {
     "type": "git",
