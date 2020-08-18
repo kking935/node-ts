@@ -2,13 +2,19 @@ import express, { Application, Request, Response, NextFunction } from 'express';
 
 const app: Application = express();
 
-const add = (a: number, b: number): number => a + b;
+// Declare variables
+const port: number = 5000;
+let refreshCount: number = 0;
+
+const handleRefresh = (res: Response) => {
+    console.log(`Refresh count: ${refreshCount++}`)
+};
 
 app.get('/', (req: Request, res: Response, next: NextFunction) => {
-    console.log(add(5, 5));
-    res.send('hello');
+    handleRefresh(res);
+    res.send(`Hello World! \n Page load count: ${refreshCount}`);
 });
 
-app.listen(5000, () => {
-    console.log('server running');
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
 });
