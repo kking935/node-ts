@@ -1,9 +1,12 @@
 import express, { Application, Request, Response, NextFunction } from 'express';
+import * as dotenv from 'dotenv';
+
+// Configure dotenv
+dotenv.config();
 
 const app: Application = express();
 
-// Declare variables
-const port: number = 5000;
+const port = process.env.PORT || 3000;
 let refreshCount: number = 0;
 
 const handleRefresh = (res: Response) => {
@@ -12,7 +15,7 @@ const handleRefresh = (res: Response) => {
 
 app.get('/', (req: Request, res: Response, next: NextFunction) => {
     handleRefresh(res);
-    res.send(`Hello World! \n Page load count: ${refreshCount}`);
+    res.send(`Hello World! Page load count: ${refreshCount}`);
 });
 
 app.listen(port, () => {
