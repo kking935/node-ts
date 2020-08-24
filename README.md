@@ -3,7 +3,7 @@ A base app for developing node servers with typescript
 ## Development
 To start for development, run 
 ```
-npm run dev
+yarn dev
 ```
 
 During development, write your typescript code in the `app.ts` file.
@@ -11,10 +11,7 @@ During development, write your typescript code in the `app.ts` file.
 ## Production
 To build for production, run 
 ```
-npm build
+yarn build
 ```
 
 This will compile the typescript code into javascript and add it to the `dist` folder
-
-## Configurations
-Change the `target` value in the `tsconfig.json` to specify the ES version (current default is ES6)
